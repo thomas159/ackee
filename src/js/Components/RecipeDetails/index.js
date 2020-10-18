@@ -11,12 +11,6 @@ const Wrap = styled.div`
   height: calc(100vh - 100px);
 `
 
-const RateRecipe = styled.div`
-  width: 100%;
-  height: 100px;
-  background: ${palette.blue}
-`
-
 const ImageWrap = styled.div`
   position: relative;
   width: 100%;
@@ -72,12 +66,27 @@ const SvgWrap = styled.svg`
 const RatingWrap = styled.div`
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   padding: 0 0 0 20px;
+`
+const RateRecipe = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
+  background: ${palette.blue}
 `
 
 const RecipeOverview = styled.div`
+  padding: 20px;
+`
 
+const RecipeRatingText = styled.div`
+  color: #fff;
+  padding: 10px 0 0 0;
+  font-weight: 700;
 `
 
 const RecipeDetails = ({ recipes }) => {
@@ -107,6 +116,7 @@ const RecipeDetails = ({ recipes }) => {
             </InfoWrap>
           </Wrap>
           <RateRecipe>
+            <RecipeRatingText>Ohodnoť tento recept</RecipeRatingText>
             <RecipeRating recipeId={recipe.id} />
           </RateRecipe>
         </React.Fragment>,

@@ -12,8 +12,8 @@ const Wrap = styled.div`
   padding: 10px;
 `
 const SvgWrap = styled.svg`
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   color: ${(props) => (props.active ? '#fff' : 'rgba(0,0,0,0.2)')};
 `
 
