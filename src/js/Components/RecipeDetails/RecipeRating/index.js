@@ -15,15 +15,7 @@ const SvgWrap = styled.svg`
   width: 30px;
   height: 30px;
   color: ${(props) => (props.active ? '#fff' : 'rgba(0,0,0,0.2)')};
-`
-
-const Overlay = styled.div`
-  position: absolute;
-  height: ${(props) => (props.details ? '20px' : '10px')};
-  width: ${(props) => props.percent}%;
-  background: ${(props) => (props.details ? `${palette.purple}` : '#fff')};
-  top: 0; 
-  right: 0;
+  cursor: pointer;
 `
 
 const RecipeRating = ({ recipeId }) => {
@@ -40,7 +32,6 @@ const RecipeRating = ({ recipeId }) => {
 
   return (
     <Wrap>
-      <Overlay />
       {[ ...Array(5).keys() ].map(i =>
         <SvgWrap
           key={i}
